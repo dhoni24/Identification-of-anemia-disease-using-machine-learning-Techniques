@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='my-style.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Anemia Disease Recognition
+		</div>
+
+	</div>
+	</header>
+
+		<center>
+			<h2 style="color:greenyellow;">Prediction</h2>
+		</center></h>
+	<div class="results">
+
+
+
+	{% if prediction == 0%}
+	<div class= "healthy_bc" style = "background-image: url('/static/img/healthy_bc.jpg');"><br/>
+		<h2 style="color:green;">Congratulations!!Your are Absolutely fine.</h2><b>Just follow the instructions for a health living.</b><br/>
+		&nbsp &nbsp <div class="Home Remedies"><br/> <br/> <br/> <br/> <br/> <br/><br/><br/> <br/> <br/> <br/>
+			</center>
+				<center>
+				<head>
+					<style>
+					.button {
+					  background-color: #4caf50;
+					  border: none;
+					  color: white;
+					  padding: 15px 32px;
+					  text-align: center;
+					  text-decoration: none;
+					  display: inline-block;
+					  font-size: 20px;
+					  margin: 4px 2px;
+					  cursor: pointer;
+					}
+					</style>
+					</head>
+					<body>
+					
+					<a href="/static/img/healthy diet.jpg"  class="button">Healthy Diet</a>
+					<a href="static/img/Vitamins.jpg"  class="button">vitamins chart</a>
+					</center> <br/><br/> <br/> <br/> <br/> <br/><br/> <br/> <br/> <br/> <br/><br/> <br/> <br/> <br/> 
+		</div>
+	</div>
+	{% elif prediction == 1%}
+		<h2 style="color:RED;"> Sorry ! You might have a sickle cells Anemia.</h2>
+		<div style="background-image: url('/static/img/sca_bc.jpg');">
+		<p style ="color : Grey"><b> Symptoms Of the sickle cells</b></p> <p>
+		1)Fatigue and anemia.<br/> 2)Pain crises.<br/> 3)Bacterial infections.<br/> 4)Sudden pooling of blood in the spleen and liver congestion.<br/> 5)Lung and heart injury.<br/> 6)Leg ulcers<br/>
+	</p>
+		<p style ="font-size: 20px ; "color:red"> <b>Medications : Don't consume any drugs  without doctor suggestion which may cause severe side effects</b></p> <br/><p>
+			<b>1)Hydroxyurea (Droxia, Hydrea, Siklos):</b> Daily hydroxyurea reduces the frequency of painful crises and might reduce the need for blood transfusions and hospitalizations. It can also increase your risk of infections. Don't take the drug if you're pregnant.<br/>
+			<b>2)L-glutamine oral powder (Endari):</b> The FDA recently approved this drug for treatment of sickle cell anemia. It helps in reducing the frequency of pain crises.<br/>
+			<b>3)Crizanlizumab (Adakveo):</b> The FDA recently approved this drug for treatment of sickle cell anemia. Given through a vein, it helps reduce the frequency of pain crises. Side effects can include nausea, joint pain, back pain and fever.<br/>
+			<b>4)Pain-relieving medications:</b> Your doctor might prescribe narcotics to help relieve pain during sickle cell pain crises.<br/>
+			<b>4)Voxelotor (Oxbryta): </b> The Food and Drug Administration (FDA) recently approved this oral drug to improve anemia in people with sickle cell disease. Side effects can include headache, nausea, diarrhea, fatigue, rash and fever.</p>
+		<h2 style="color:Blue"><b>Surgical and other procedures for curing sickle cells</b></h2>
+		<h2 style = "color:Green"> 1)Blood Transfusion :</h2><p class="lead">Red blood cells are removed from a supply of donated blood, then given through a vein to a person with sickle cell anemia. This increases the number of normal red blood cells, which helps reduce symptoms and complications.<br/></p>
+		<p style="font-size: 20px;"><b>Blood Centers : <br/></b> 1)Thalassemia and Sickle Cell Society.<br/> Location:Door No. 8-13-95/1/C, Opp Lane to National Police Academy Raghavendra Colony, Shivarampally, Rajendranagar mandal, Hyderabad, Telangana 500052 <br/>Phone number:040 2988 5658 <br/></p>
+			<head>
+				<style>
+				.button {
+				  background-color: #af844c;
+				  border: none;
+				  color: white;
+				  padding: 15px 32px;
+				  text-align: center;
+				  text-decoration: none;
+				  display: inline-block;
+				  font-size: 15px;
+				  margin: 4px 2px;
+				  cursor: pointer;
+				}
+				</style>
+				</head>
+				<body>
+				<a href="https://maps.app.goo.gl/xbHhyvCBMp8sifmp6"  class="button">Thalassemia society location link</a> <br/>
+			<p style="font-size: 20px;"> 2)Dharamshila Narayana Superspeciality Hospital.<br/> Location :Metro Station, Dharamshila marg, Vasundhara Enclave Near Ashok Nagar, Dallupura, New Delhi, Delhi 110096073700 73700 </p><br/>
+<head>
+	<style>
+	.button {
+	  background-color: #af844c;
+	  border: none;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 10px;
+	  margin: 2px 2px;
+	  cursor: pointer;
+	}
+	</style>
+	</head>
+	<body>
+	<a href="https://maps.app.goo.gl/1VFtGoNAq2doTPqA7"  class="button">Dharamshila Narayana Superspeciality Hospital location link</a> <br/>
+<p style ="font-size: 20px;">3)Indiana hemophilia and thrombosis center.<br/>Location : 8326 Naab Rd, Indianapolis, IN 46260, United States <br/> <br/> 4) AMERICAN SOCIETY OF HEMATOLOGY <br/> Location :2021 L Street NW, Suite 900,
+Washington, DC 20036.<br/>Phone 202-776-0544</p><br/>
+		<h2 style = "color:Green"> 2)Stem cell transplant:</h2><p class=""lead> Stem Cell Transplant is also known as bone marrow transplant, this procedure involves replacing bone marrow affected by sickle cell anemia with healthy bone marrow from a donor. The procedure usually uses a matched donor, such as a sibling, who doesn't have sickle cell anemia. Because of the risks associated with a bone marrow transplant, the procedure is recommended only for people, usually children, who have significant symptoms and complications of sickle cell anemia.<br/></p>
+	
+			<h2 style ="color: red "> <b>Home Remedies : </b></h2>
+
+		<p> Follow the instructions carefully if you want to cure from Home. Even it is useful for pregnancy women </p>
+		<div class="Home Remedies">
+			<center>
+				<head>
+					<style>
+					.button {
+					  background-color: #4caf50;
+					  border: none;
+					  color: white;
+					  padding: 15px 32px;
+					  text-align: center;
+					  text-decoration: none;
+					  display: inline-block;
+					  font-size: 20px;
+					  margin: 4px 2px;
+					  cursor: pointer;
+					}
+					</style>
+					</head>
+					<body>
+					
+					<a href="/static/img/Home remedies for SCa.png"  class="button">sickle cell Diet</a>
+					<a href="/static/img/SCD before Pregnancy.jpg"  class="button">Diet chart for womens before pregnancy</a>
+					<a href="/static/img/SCA_Fruits.jpg"  class="button">Fruits charts</a>
+					</center> <br/><br/> <br/> <br/> <br/> <br/><br/> <br/> <br/> <br/> <br/><br/> <br/> <br/> <br/> 
+
+            <br/> <br/>
+		</div>
+	</div>
+</div>
+	{% else %}
+		<h2 style="color: Red;"> Sorry ! You might have Thalassemia Disease </h2>
+	<div style="background-image: url('/static/img/Thalassemia_bc.jpg');">
+			<h2 style="color:black"> Symptoms of Thalassemia disease </h2><p>
+			1)Fatigue<br/> 2)Weakness<br/> 3)Pale or yellowish skin<br/> 4)Facial bone deformities <br/>5)Slow growth<br/> 6)Abdominal swelling <br/>7)Dark urine.
+			<br/><p style ="color:Black"> <b>Note: Mild forms of thalassemia trait don't need treatment</b></p><br/> </p>
+			<p style = "color:green"> <b>Don't consume any drugs  without doctor suggestion which may cause severe side effects</b></p>
+			<h2 style = "color:red">For moderate to severe thalassemia, treatments might include:<br/></h2><p style=" color:red"><b> 1)Blood Transfusions</b></p><p> More severe forms of thalassemia often require frequent blood transfusions, possibly every few weeks. Over time, blood transfusions cause a buildup of iron in your blood, which can damage your heart, liver and other organs.<br/>
+				<p style="font-size: 20px;"><b>Blood Centers : <br/></b> 1)Thalassemia and Sickle Cell Society.<br/> Location:Door No. 8-13-95/1/C, Opp Lane to National Police Academy Raghavendra Colony, Shivarampally, Rajendranagar mandal, Hyderabad, Telangana 500052 <br/>Phone number:040 2988 5658 <br/></p>
+				<head>
+					<style>
+					.button {
+					  background-color: #af844c;
+					  border: none;
+					  color: white;
+					  padding: 15px 32px;
+					  text-align: center;
+					  text-decoration: none;
+					  display: inline-block;
+					  font-size: 15px;
+					  margin: 4px 2px;
+					  cursor: pointer;
+					}
+					</style>
+					</head>
+					<body>
+					<a href="https://maps.app.goo.gl/xbHhyvCBMp8sifmp6"  class="button">Thalassemia society location link</a> <br/><br/> 2) UCSF Benioff Children's Hospital Oakland Northern California Comprehensive Thalassemia Center 747 52nd Street, Oakland CA 94609. Phone: (510) 428-3347.<br/> <br/>3)AMERICAN SOCIETY OF HEMATOLOGY Location :2021 L Street NW, Suite 900,  <br/><p style="font-size: 20px;">2)<b>Chelation therapy:</b></p><p> This is treatment to remove excess iron from your blood. Iron can build up as a result of regular transfusions. Some people with thalassemia who don't have regular transfusions can also develop excess iron. Removing the excess iron is vital for your health. To help rid your body of the extra iron, you might need to take an oral medication, such as deferasirox (Exjade, Jadenu) or deferiprone (Ferriprox). Another drug, deferoxamine (Desferal), is given by needle.
+			<br/><p style ="font-size: 20px;"><b>3)Stem cell transplant:</b> </p> <p> It is also called a bone marrow transplant, a stem cell transplant might be an option in some cases. For children with severe thalassemia, it can eliminate the need for lifelong blood transfusions and drugs to control iron overload.
+			This procedure involves receiving infusions of stem cells from a compatible donor, usually a sibling.
+		</p>
+			<h2 style="font-size: 20px;">Home Remedies</h2>
+			<center>
+			
+					<head>
+						<style>
+						.button {
+						  background-color: #4caf50;
+						  border: none;
+						  color: white;
+						  padding: 15px 32px;
+						  text-align: center;
+						  text-decoration: none;
+						  display: inline-block;
+						  font-size: 20px;
+						  margin: 4px 2px;
+						  cursor: pointer;
+						}
+						</style>
+						</head>
+						<body>
+						
+						<a href="/static/img/Thalassemia diet.jpg"  class="button">Thalassemia Diet</a>
+						
+						</center>
+			</center>
+			<p class ="lead"> Nutrition is very important for many, especially those with thalassemia. Individuals are encouraged to eat a balanced diet consisting of protein, grains, fruits, and vegetables and may need to pay extra attention to ensure not getting high amounts of iron through their diet.
+				For non-transfused thalassemia patients - a low-iron diet is encouraged—that is, avoiding excessive consumption of high iron foods like red meat.
+				For transfused patients on chelation therapy, a low-iron diet not neccessary.</p>
+			<h2 style="color:green"><b>1)Protein Foods:</b> </h2><p class="lead">1)Protein is very important for growth and development. However, many high protein foods are also high in iron. <br/> 2)Foods to consume: eggs, yogurt, beans, peanut butter, nuts, cheese, soy<br/>3)Foods to consume in moderation (have higher iron): beef, lamb, pork, liver, dark poultry,</p>
+			<h2 style="color:red"><b>2)Calcium and Vitamin D:</b></h2><p class="lead">1)Calcium and Vitamin D are necessary because some of the secondary health problems that occur in people with thalassemia affect bone formation.
+			<br/>2)Calcium – milk, yogurt, cheese, white beans<br/>3)Vitamin D – choose milk fortified with Vitamin D <br/>4)It is difficult to get adequate Vitamin D through foods, so you may need a supplement:Infant and toddler: 400 units daily, Child: 1000 units daily, Teen and adult: 2000 units daily.</p>
+			<h2 style="color:Blue"> <b>3)Foods that interfere with iron absorption :<br/></h2>
+			<p class="lead"> 1)Dairy<br/> 2)Tea (such as black tea) and Coffee<br/> 3)Soy (milk, edamame, meat substitutes, tofu)</p><br/>
+			
+			
+	{% endif %}
+
+
+	</div>
+</div>
+</body>
+</html

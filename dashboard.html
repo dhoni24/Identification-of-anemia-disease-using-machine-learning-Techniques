@@ -1,0 +1,460 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Identification Of Disease</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="/static/img/portfolio/favicon.png" rel="icon">
+  <link href="/static/img/portfolio/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="/static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="/static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="/static/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="/static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="/static/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: BizPage
+    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+
+      <h1 class="page-header">Welcome, {{ name }}</h1>
+      <div class="container-fluid">
+        <div id="logo" class="pull-left">
+        <h1><a href="#intro" class="scrollto">DiseasePrediction</a></h1><br/>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About SickleCellDisease</a></li>
+          <li><a href="#services">About Thalassemia</a></li>
+          <li><a href="#portfolio">Prediction and Analysis</a></li>
+          <li><a href="#team">Prediction with Parameters</a></li>
+          <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          <li><a href="#contact">About Project</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container">
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+            <div class="carousel-item active" style="background-image: url('/static/img/intro-carousel/1.jpg');">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>Sickle cell Anemia</h2>
+                <p class = "lead">Sickle cell anemia is a transmitted red blood cell disorder that causes major diseases and
+deaths and impacts most countries health and economic status. Sickle cell disease (SCD) patients
+may experience serious and sometimes life-threatening complications and severe organ damage that
+decreases their quality of life and the expected life.</p>
+                <!--<a href="#featured-services" class="btn-get-started scrollto">Get Started</a>-->
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url('/static/img/intro-carousel/2.jpg');">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>Thalassemia</h2>
+                <p class = "lead"> Thalassemia is another abnormal kind of blood disease that is very severe as compared to
+sickle cell disease. The major cause of thalassemia is a mutation in the DNA of cell carriers from
+parents to children. Thalassemia having two kinds of disease (i.e. Alpha and Beta Thalassemia).</p>
+                <!--<a href="#featured-services" class="btn-get-started scrollto">Get Started</a>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- #intro -->
+
+  <main id="main">
+
+
+    <!--==========================
+      About SickleCellDisease
+    ============================-->
+    <section id="about">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>About SickleCellDisease</h3>
+          <p>Sickle Cell Anemia (SCA) is a one kind of abnormal blood disease which is usually called as Sickle cell Disease (SCD) or a normal Sickle Cell. In human body, blood flows through small circular shape which carries oxygen to organs where sickle cells shape are disc shape (sickle shaped cells)
+		  A normal blood cell life span is approximately 120 days. After 120 days a new blood cell is generated . Sickle cell life span is 10 to 20 days .
+
+
+</p>
+        </header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+              <div class="img">
+                <img src="/static/img/portfolio/about-mission.jpg" alt="" class="img-fluid">
+              </div>
+              <p>
+                This cell is an inherited disorder that affects normal hemoglobin present in the Red Blood Cells (RBC) . The presence of sickle cell in hemoglobin leads to the formation of sickle-shaped cells that are very rigid and sticky . This kind of anemia may cause severe pain, necrosis and serious complications, in some cases it may lead to death.SCD is mainly caused by a mutation in the sixth codon of the 𝛽-globin gene on chromosome 11 that leads to a single amino acid substitution. we can clearly see that the normal blood flow will flow freely so it cannot cause any problem as their shape is in circular which carries oxygen to organs where sickle cell shape is sticky due to that blood flow will stop at any stage.Treatment is available for SCD by taking Antibiotics and Blood Transfusion. The medication includes prophylactic antibiotic and immunizations are used. Along with this, certain vitamins and medicines such as folic acid and hydroxyurea can also be considered. </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+                <p>
+				 The patients with severity of SCD are advised to go with Bone marrow transplantation which is treated as the high impacted treatment for SCD. Due to stoppage of blood flow, human beings may cause severe body pains, heart strokes etc.
+              Sickle cell is firstly observed in the black population later it has been observed in people of other ethnic group, which include individuals from parts of the Middle East, Central India, Mediterranean Sea, especially in Italy and Greece. After early diagnosis and detection, Doctors may recommend medicines or transfusions to manage complications of the disease, including pain management.
+
+				</p>
+              <p>
+                Due to the sickle shape of the blood cell and its nature of sticky, the blood cells were stopped flowing through the blood vessels and results painful episodes in patients’ life. Pain management is an important phase of treatment for this disease.Patients who experience sequence of splenic sequestration may definitely require splenectomy. Bone marrow transplantation is treated as the only curative form of treatment .
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img">
+                <img src="/static/img/portfolio/about-vision.jpg" alt="" class="img-fluid">
+              </div>
+              <p>
+                    SCD is actually very rare blood disorder in human body but now it has been observed very quiet in human hemoglobin. Sickle cell is also observed in new born babies. SCD are crescent-shaped cells which are stiff and sticky and interact with other cells. Due to sticky sickle cell in human hemoglobin it stops blood to flow in human body, if one organ is affected slowly it will be spreading entire human organs which may lead to death. To prevent this anemia type of disease, major step is to take blood transfusion for 1-2 months for normal flow of nutrition and oxygen.
+When two abnormal genes causes a person with hemoglobin S, in which a person has two hemoglobin S gene then the person has sickle cell anemia. The study on SCD by Narcisse Elenga et al has identified that pregnancy in sickle cell women has numerous obstetrical, non-obstetrical and fetal complications and requires a support of multidisciplinary team that includes primary physician, Obstetrician and with an integration of Centre for Sickle Cell Disease. </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+	<div class="container">
+
+        <header class="section-header">
+          <h3>About Thalassemia</h3>
+          <p>Thalassemia is another abnormal kind of blood disease which is more severe when compared to sickle cell disease. The major cause of thalassemia is mutation in the DNA of cells carriers from parents to children. Thalassemia is having two kinds of diseases (i.e. Alpha and Beta Thalassemia). The life span of thalassemia cells is approximately 100 days. The symptoms of thalassemia can be observed after 6 months in new born babies because after 6 months normal hemoglobin starts replacing the fetal type. Symptoms are lack of energy, tiredness, breathing problem, pale skin (jaundice), irregular heartbeats.
+</p>
+        </header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+              <div class="img">
+                <img src="/static/img/t1.jpg" alt="" class="img-fluid" align="middle">
+              </div>
+              </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+                <p class ="lead">
+				 Alpha thalassemia:  We need 4 alpha-globin protein chains, each individual, two on each chromosome 16. We get two from each parent. If any one of the gene is missing then alpha thalassemia occurs.
+				</p>
+              <p class = "lead">
+                Beta thalassemia: We need 2 globin genes for beta-globin chains, one from each parent. If one or both genes are not matched, beta thalassemia will occur.
+				</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img">
+                <img src="/static/img/t2.jpg" alt="" class="img-fluid" align="middle">
+              </div>
+               </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="portfolio"  class="section-bg" >
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Prediction and Analysis</h3>
+          <h3 class ="section-subtitle"> Anemia Prediction based on various classification method :</h3> 
+          <p style="font-size:20px" >1) SVM Classifier <br/> 2) Logistic Regression classifier <br/> 3) KNN Classifier <br/> 4)Decision Tree Classifier <br/> 5)RandomForest Classifier</h3>
+          <p style = "font-size: 20px" ><b> SVM Classifier :</b> </p><p style = "font-size:15px"><b> SVM classifier is a supervised learning technique which evaluates the statistics used for analysis of regression and classification and it provides best possible Decision Boundary.</b></p>
+
+          <div class="SVM classifier">
+            <center>
+            <img src="/static/img/SVM classifier.jpg" height="200" width="200" style="left">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+            <img src="/static/img/76.png" height="200" width="200" style="right">
+            </center><br/> <br/> <br/> <br/> <br/> <br/>
+
+          </div>
+
+          <p style = "font-size:20px" ><b>Logistic Regression Classifier :</b>  </p> <p style = "font-size:15px"> <b>Logistic Regression is a supervised classification algorithm. By given set of inputs(Features) which predicts output(target variable) which accepts only Discrete values for given inputs.</b>  </p>
+          <div class="Logistic Regression classifier">
+            <center>
+            <img src="/static/img/Logistic Regression Classifier.png" height="200" width="200">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+            <img src="/static/img/77.png" height="200" width="200" style="right">
+            </center><br/> <br/> <br/> <br/> <br/> <br/>
+
+          </div>
+          <p style ="font-size:20px"><b>KNN Classifier : </b></p> <p style = "font-size:15px"><b>KNN is one of the Simplest algorithm used for regression and classification Problems.</b></p>
+            <div class="KNN classifier">
+            <center>
+            <img src="/static/img/KNN Classifier.png" height="200" width="200">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+            <img src="/static/img/78.jpeg" height="200" width="200" style="right">
+            </center><br/> <br/> <br/> <br/> <br/> <br/>
+
+          </div>
+          <p style = "font-size:20px"> <b> Decision Tree Classifier : </b></p> <p style = "font-size:15px"><b>A  Decision Tree classifier supports the decisions and their consequences in the form of a tree structure model.</b></p>
+             <div class="Decision Tree Classifier">
+            <center>
+            <img src="/static/img/Decision Tree Classifier.png" height="200" width="200">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+            <img src="/static/img/95.jpeg" height="200" width="200" style="right">
+            </center><br/> <br/> <br/> <br/> <br/> <br/>
+
+          </div>
+          <p style = "font-size:20px" > <b> Random Forest Classifier :</b></p><p style = "font-size:15px"> <b>A Random Forest allows number of decision tree classifiers on various sub samples of the dataset and used for improving the predictive accuracy and avoiding over fitting.</b></p>
+            <div class="Random Forest classifier">
+            <center>
+            <img src="/static/img/Random Forest Classifier.png" height="200" width="200">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+            <img src="/static/img/96.jpeg" height="200" width="200" style="right">
+            </center><br/> <br/> <br/> <br/> <br/> <br/>
+
+        
+
+          </div>
+
+        </header>
+
+
+
+    <section id="team">
+      <div class="container">
+        <div class="section-header wow fadeInUp">
+          <h3>Prediction with Parameters</h3>
+          <!DOCTYPE html>
+
+          <h3>
+              Anemia Disease prediction using Parameters
+          </h3>
+
+            <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='my_style.css') }}">
+            <div class="container">
+              <form action="{{ url_for('predict')}}" method="POST">
+                <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name..">
+
+
+                <label for="AGE">AGE</label>
+      <input type="text" id="AGE" name="AGE" placeholder="Your age..">
+
+      <label for="HB">HB</label>
+        <input type="text" class="form-control" id="HB" name="HB" placeholder="Your HB Blood Test Range">
+
+
+      <label for="HCT">HCT</label>
+        <input type="text" class="form-control" id="HCT" name="HCT" placeholder="Your HCT Blood Test Range">
+
+      <label for="RDW">RDW</label>
+        <input type="text" class="form-control" id="RDW" name="RDW" placeholder="Your RDW Blood Test Range">
+
+      <label for="MCV">MCV</label>
+        <input type="text" class="form-control" id="MCV" name="MCV" placeholder="Your MVC Blood Test Range">
+
+      <label for="MCH">MCH</label>
+        <input type="text" id="MCH" name="MCH" placeholder="Your MCH Blood Test Range">
+
+      <label for="MCHC">MCHC</label>
+        <input type="text" id="MCHC" name="MCHC" placeholder="Your MCHC Blood Test Range">
+
+      <label for="RBCcountinmillions">RBCcountinmillions</label>
+        <input type="text" class="form-control" id="RBCcountinmillions" name="RBCcountinmillions" placeholder="Your RBCcountinmillions Blood Test Range">
+
+      <label for="RETIC">Retic</label>
+        <input type="text" class="form-control" id="RETIC" name="RETIC" placeholder="Your RETIC Blood Test Range">
+
+
+      <label for="HBF">HBF</label>
+         <input type="text" class="form-control" id="HBF" name="HBF" placeholder="Your HBF Blood Test Range">
+
+
+      <label for="HBAo">HBAo</label>
+        <input type="text" class="form-control" id="HBAo" name="HBAo" placeholder="Your HBAo Blood Test Range">
+
+
+      <label for="HBA2">HBA2</label>
+        <input type="text" class="form-control" id="HBA2" name="HBA2" placeholder="Your HBA2 Blood Test Range">
+
+
+      <input type="submit" value="Predict">
+
+
+
+
+              </form>
+            </div>
+        </div>
+      </div>
+    </section><!-- #team -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <div id="contact" class="section-bg wow fadeInUp">
+      <div class="container">
+
+        <div class="section-header">
+          <h3>About Project</h3>
+          <p style="font-size:25px" >Anemia Disease Predictor  is used for predicting Thalassemia and Sickle cell Disease</p>
+          <p> <p style="font-size:20px" >About project :<br/></p>
+          <p style ="font-size :15px"> Sickle cells is hematological disorder(hematological is a study of blood in health and diseases) which may leads to organ damage, heart strokes, serious complications. It may also reduces the human life span. Most of the sickle cells are observed in new born babies. It was initially thought to be a particular feature of tribal peoples, but it has now been found in all populations.	Sickle cell Symptoms are observed in human beings as episodes of pains(crisis), Painful swelling of hands and Feet, and Vision problems. By using Artificial neural network technique we can identify sickle cells in human body effectively with high accuracy. Detecting sickle cell as early as possible which helps the patient to cure by using antibiotics, vitamins, blood transfusions, pain-relieving medicines etc.</p>
+         
+      
+      <p style="font-size:20px"> <b>From all classifiers, we have achieved best accuracy from Random forest classifier(i.e. 96.3%) . <br/> we have stored RandomForest classifier trained data with the help of pickling package(i.e.pkl), by using pickling package we can predict without training the model continuously </b></p>
+         
+      <p style ="font-size:25px"> Objectives of this research work :</p>
+      <p style="font-size:15px">1)To eliminate the manual assessment, classification and counting of cells that requires huge amount of time which may leads to wrong classification. <br/>2) To apply and use machine learning techniques to classify the cells which is robust and very effective in computation in identification of sickle cells in RBCs.<br/>3) To improve the accuracy and performance of the system using Machine learning techniques we can compared to the traditional manual assessment and classification</p>
+
+         <h4><p style="font-size:25px"> Team Members :</p></h4>
+
+          <div class="row">
+            <div class="col-lg-3 col-md-6 wow fadeInUp">
+              <div class="member"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <img src="/static/img/pavangowtham.jpg" class="img-fluid" alt="" width ="160"  height = "160">
+
+                <div class="member-info">
+                  <div class="member-info-content"> &nbsp
+                    <h4><p style= "color:red">Bathula Pavan Gowtham <p class="lead">Intern <br/> M.Tech II Year <br/>  Software Engineering <br/> VNR Vignana Jyothi Institute Of Engineering & Technology</p></p></p> </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="member">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <img src="/static/img/chandana.jpg" class="img-fluid" alt=""  width ="150"  height = "140">
+                <div class="member-info">
+                  <div class="member-info-content"> <br/><br/>
+                    <h4><p style= "color:red">Hari Chandana <p class="lead"> Intern <br/> B.Tech III Year <br/> Computer Science & Engineering <br/> VNR Vignana Jyothi Institute Of Engineering & Technology</p></p></p></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="member">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <img src="/static/img/sagar.jpg" class="img-fluid" alt="" width ="150"  height = "155">
+                <div class="member-info">
+                  <div class="member-info-content"><br/><br/>
+                    <h4><p style= "color:red"> Dr.Sagar Yeruva <p class ="lead">Principal Investigator  <br/>Computer Science & Engineering <br/>VNR Vignana Jyothi Institute Of Engineering & Technology</p> </p></p></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="member">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                <img src="/static/img/sharada.jpg" class="img-fluid" alt="" width ="150"  height = "150">
+                <div class="member-info">
+                  <div class="member-info-content"><br/><br/>
+                    <h4><p style= "color:red">Dr.M.Sharada Varalakshmi <p class="lead">Co-Principal Investigators <br/> Computer Science & Engineering <br/>St.Peter's Engineering College </p> </p> </p></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #team -->
+  <!-- JavaScript Libraries -->
+  <script src="/static/lib/jquery/jquery.min.js"></script>
+  <script src="/static/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="/static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/lib/easing/easing.min.js"></script>
+  <script src="/static/lib/superfish/hoverIntent.js"></script>
+  <script src="/static/lib/superfish/superfish.min.js"></script>
+  <script src="/static/lib/wow/wow.min.js"></script>
+  <script src="/static/lib/waypoints/waypoints.min.js"></script>
+  <script src="/static/lib/counterup/counterup.min.js"></script>
+  <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="/static/lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="/static/lib/lightbox/js/lightbox.min.js"></script>
+  <script src="/static/lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="/static/js/main.js"></script>
+
+</body>
+</html>
+
+{% endblock %}
